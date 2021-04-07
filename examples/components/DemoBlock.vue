@@ -83,8 +83,6 @@ export default {
 .demo-block {
   padding: 8px 16px;
   margin-top: 10px;
-  border-left: solid 5px#17171d;
-  background-color: #ededed;
   border-radius: 3px;
   transition: 0.2s;
   &.hover {
@@ -93,7 +91,7 @@ export default {
   }
   .meta {
     margin-top: 10px;
-    background-color: #fafafa;
+    background-color: var(--weui-BG-0);
     border-radius: 8px;
     overflow: hidden;
     height: 0;
@@ -114,10 +112,10 @@ export default {
     }
   }
   .demo-block-control {
-    border-top: solid 1px #eaeefb;
+   
     height: 44px;
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: var(--weui-BG-2);
     border-radius: 8px;
     text-align: center;
     margin-top: 10px;

@@ -33,7 +33,7 @@
     "markdown-it-container": "^3.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.0.1",
-    "weui": "^2.4.3"
+    "weui": "^2.4.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.0",

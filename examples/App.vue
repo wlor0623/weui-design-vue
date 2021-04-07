@@ -73,8 +73,8 @@ export default {
   methods: {
     initTheme: function () {
       const siteTheme = localStorage.getItem('site-theme')
-      if (siteTheme === 'blue') {
-        this.changeStyle('blue');
+      if (siteTheme === 'dark') {
+        this.changeStyle('dark');
       } else {
         this.changeStyle('default');
       }
@@ -84,29 +84,30 @@ export default {
         title: '切换主题',
       }
       const menus = [
-        { text: '默认主题' },
-        { text: '蓝色主题' },
+        { text: '明亮主题' },
+        { text: '黑暗主题' },
       ]
       this.$actionSheet.show(config, menus).then((res) => {
-        const siteTheme = res === 1 ? 'blue' : 'default'
+        const siteTheme = res === 1 ? 'dark' : 'light'
         localStorage.setItem('site-theme', siteTheme)
         this.changeStyle(siteTheme)
       })
     },
     changeStyle: function (theme) {
-      if (theme === 'blue') {
-        const style = document.createElement('link');
-        style.type = 'text/css';
-        style.rel = 'stylesheet';
-        style.id = 'blue-theme';
-        style.href = `${this.publicPath}themes/style-blue.css`;
-        document.body.appendChild(style);
-      } else {
-        const dom = document.getElementById('blue-theme');
-        if (dom) {
-          dom.remove();
-        }
-      }
+      document.body.setAttribute("data-weui-theme",theme)
+      // if (theme === 'blue') {
+      //   const style = document.createElement('link');
+      //   style.type = 'text/css';
+      //   style.rel = 'stylesheet';
+      //   style.id = 'blue-theme';
+      //   style.href = `${this.publicPath}themes/style-blue.css`;
+      //   document.body.appendChild(style);
+      // } else {
+      //   const dom = document.getElementById('blue-theme');
+      //   if (dom) {
+      //     dom.remove();
+      //   }
+      // }
     }
   }
 }
@@ -117,10 +118,14 @@ body {
   margin: 0;
   height: 100%;
 }
+#app{
+    background-color: var(--weui-BG-0);
+  color: var(--weui-FG-0);
+}
 .header {
   top: 0;
   height: 60px;
-  border-bottom: 1px solid #eaecef;
+  border-bottom: 1px solid var(--weui-FG-3);
 }
 .header .logo {
   float: left;
@@ -151,7 +156,7 @@ body {
   float: left;
   height: 100%;
   width: 300px;
-  border-right: 1px solid #eaecef;
+  border-right: 1px solid var(--weui-FG-3);
 }
 @media screen and (max-width: 1150px) {
   .sidebar {

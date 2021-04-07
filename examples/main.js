@@ -14,7 +14,7 @@ hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('bash', bash);
 hljs.registerLanguage('css', css);
 hljs.registerLanguage('xml', xml);
-import 'highlight.js/styles/monokai-sublime.css'
+import 'highlight.js/styles/atom-one-dark.css'
 
 router.afterEach(() => {
   Vue.nextTick(() => {

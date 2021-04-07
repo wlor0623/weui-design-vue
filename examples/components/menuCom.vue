@@ -81,7 +81,6 @@ export default {
   .nav-item {
     a {
       font-size: 16px;
-      color: #2c3e50;
       padding: 10px;
       margin-left: 20px;
       text-decoration: none;
@@ -89,7 +88,8 @@ export default {
       position: relative;
       transition: 0.15s ease-out;
       font-weight: bold;
-      border-left: #ffffff 2px solid;
+      border-left: var(--weui-FG-3) 2px solid;
+  color: var(--weui-FG-0);
       &:hover {
         color: var(--weui-BRAND);
       }
@@ -103,7 +103,8 @@ export default {
         display: block;
         padding: 10px;
         margin: 0 20px;
-        color: #2c3e50;
+  color: var(--weui-FG-0);
+
         line-height: 40px;
         font-size: 16px;
         overflow: hidden;
@@ -149,7 +150,7 @@ export default {
     line-height: 26px;
     padding: 10px;
     margin-left: 20px;
-    border-left: #ffffff 2px solid;
+    border-left: var(--weui-FG-3) 2px solid;
     font-weight: bold;
   }
   #code-sponsor-widget {
